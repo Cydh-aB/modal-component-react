@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# React modal plugin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A library of React components created using 'create-react-app'.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Run the following command: ```npm install component-modal```
 
-### `npm start`
+## How to use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+import React, { useState } from 'react';
+import { Modal } from "@glg-dev/react-modal";
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+const App = () => {
 
-### `npm test`
+  const [display, setDisplay] = useState(false)
+  const yourTitle = "Write your title"
+  cont message = "Your message here
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  return (
+    <div>
+      <button onClick={() => setDisplay(true)}>
+        Show modal
+      </button>
+      <Modal 
+        title={yourTitle} 
+        content={message} 
+        hideModal={() => setDisplay(false)}
+        visible={display}
+      />
 
-### `npm run build`
+    </div>
+  );
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default App;
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to custom
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want, you can add your own style, copy and edit the following snippet : 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+:root {
+  --modal-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --modal-text-color: #000;
+  --modal-text-decoration: none;
+  --modal-z-index: 100;
+  --modal-wrapper-bg: rgba(0, 0, 0, 0.7);
+  --modal-container-bg: #FFF;
+  --modal-container-border-radius: 1rem;
+  --modal-container-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px, rgba(0, 0, 0, 0.3) 0px 0px 15px;
+  --modal-container-padding: 2rem;
+  --modal-elements-gap: 1rem;
+  --modal-close-button-color: black;
+  --modal-close-button-border-radius: 50%;
+  --modal-title-font-size: 1.5rem;
+  --modal-content-font-size: 1rem;
+}
+```

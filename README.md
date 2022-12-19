@@ -10,7 +10,7 @@ Run the following command: ```npm install component-modal```
 
 ```
 import React, { useState } from 'react';
-import { Modal } from "@glg-dev/react-modal";
+import { Modal } from "component-modal";
 
 const App = () => {
 

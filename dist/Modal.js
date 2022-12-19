@@ -22,9 +22,18 @@ const Modal = _ref => {
   (0, _react.useEffect)(() => {
     setIsOpen(open);
   }, [open]);
-  return isOpen && /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+  return isOpen && /*#__PURE__*/_react.default.createElement("div", {
+    className: _ModalModule.default.wrapper
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _ModalModule.default.container
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: _ModalModule.default.close,
     onClick: hideModal
-  }), /*#__PURE__*/_react.default.createElement("h1", null, title), /*#__PURE__*/_react.default.createElement("p", null, content)));
+  }), /*#__PURE__*/_react.default.createElement("h1", {
+    className: _ModalModule.default.title
+  }, title), /*#__PURE__*/_react.default.createElement("p", {
+    className: _ModalModule.default.content
+  }, content)));
 };
 exports.Modal = Modal;
 Modal.propTypes = {

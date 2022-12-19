@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import PropTypes from 'prop-types'
-import styles from './Modal.module.css'
 import { useEffect } from "react";
 
 export const Modal = ({title, content, open, hideModal}) => {
@@ -13,11 +12,11 @@ export const Modal = ({title, content, open, hideModal}) => {
     },[open])
 
     return isOpen && (
-        <div styleName={styles.wrapper} >
-            <div styleName={styles.container}>
-                <div styleName={styles.close} onClick={hideModal}></div>
-                <h1 styleName={styles.title}>{title}</h1>
-                <p styleName={styles.content}>{content}</p>
+        <div className="wrapper">
+            <div className="container">
+                <div className="close" onClick={hideModal}></div>
+                <h1 className="title">{title}</h1>
+                <p className="content">{content}</p>
             </div>
         </div>
     )

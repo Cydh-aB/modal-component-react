@@ -23,16 +23,16 @@ const Modal = _ref => {
     setIsOpen(open);
   }, [open]);
   return isOpen && /*#__PURE__*/_react.default.createElement("div", {
-    className: _ModalModule.default.wrapper
+    styleName: _ModalModule.default.wrapper
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: _ModalModule.default.container
+    styleName: _ModalModule.default.container
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: _ModalModule.default.close,
+    styleName: _ModalModule.default.close,
     onClick: hideModal
   }), /*#__PURE__*/_react.default.createElement("h1", {
-    className: _ModalModule.default.title
+    styleName: _ModalModule.default.title
   }, title), /*#__PURE__*/_react.default.createElement("p", {
-    className: _ModalModule.default.content
+    styleName: _ModalModule.default.content
   }, content)));
 };
 exports.Modal = Modal;

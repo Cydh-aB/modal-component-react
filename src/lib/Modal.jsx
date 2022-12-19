@@ -13,11 +13,11 @@ export const Modal = ({title, content, open, hideModal}) => {
     },[open])
 
     return isOpen && (
-        <div className={styles.wrapper} >
-            <div className={styles.container}>
-                <div className={styles.close} onClick={hideModal}></div>
-                <h1 className={styles.title}>{title}</h1>
-                <p className={styles.content}>{content}</p>
+        <div styleName={styles.wrapper} >
+            <div styleName={styles.container}>
+                <div styleName={styles.close} onClick={hideModal}></div>
+                <h1 styleName={styles.title}>{title}</h1>
+                <p styleName={styles.content}>{content}</p>
             </div>
         </div>
     )

@@ -28,7 +28,7 @@ const Modal = _ref => {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "close",
     onClick: hideModal
-  }), /*#__PURE__*/_react.default.createElement("h1", {
+  }, "X"), /*#__PURE__*/_react.default.createElement("h1", {
     className: "title"
   }, title), /*#__PURE__*/_react.default.createElement("p", {
     className: "content"
